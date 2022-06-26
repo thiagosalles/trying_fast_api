@@ -1,11 +1,13 @@
 [tool.poetry]
 name = "trying_fast_api"
 version = "0.1.0"
-description = ""
+description = "First project using Poetry and FastAPI"
 authors = ["Thiago Salles <tsmlima@gmail.com>"]
 
 [tool.poetry.dependencies]
-python = "^3.9"
+python = "^3.10"
+fastapi = "^0.78.0"
+uvicorn = {extras = ["standard"], version = "^0.18.1"}
 
 [tool.poetry.dev-dependencies]
 pytest = "^5.2"
@@ -13,3 +15,6 @@ pytest = "^5.2"
 [build-system]
 requires = ["poetry-core>=1.0.0"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+start = "trying_fast_api.main:start"
